@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>Enter Some Text</h1>
+    <form action="/save" method="POST">
+        <input type="text" name="user_input" placeholder="Type something..." required>
+        <button type="submit">Save</button>
+    </form>
+
+    <h2>Saved Data:</h2>
+    <ul>
+        {% for line in saved_data %}
+            <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
